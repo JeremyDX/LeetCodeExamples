@@ -1,0 +1,17 @@
+#include <string.h>
+#include <stdio.h>
+
+int main()
+{
+    const char* str = "ZY";
+    int len = 0;
+    int result = 0;
+    int base = 1;
+    for (; str[len] != 0; ++len)
+    {
+        result *= 26;
+        result += (str[len] ^ 0x40);
+    }
+
+    printf("Result: %d\n", result);
+}
